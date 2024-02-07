@@ -13,7 +13,7 @@ function App() {
   const addTodo = (event) => {
       //this will fire off when we click the button
       event.preventDefault(); //will stop refresh
-      console.log('👽', 'I am working on it'); 
+      console.log('👽', 'I am working on it');  
       setTodos([...todos, input]);
       setInput(''); //clear up the input after clicking add todo  button
   }
