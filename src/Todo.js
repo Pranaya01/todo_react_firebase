@@ -1,15 +1,17 @@
-import { List, ListItem, ListItemText } from '@mui/material'
-import React from 'react'
+import { Avatar, List, ListItem, ListItemAvatar, ListItemText } from '@mui/material';
+import React from 'react';
 
 function Todo(props) {
   return (
     <List>
-        <ListItem>
-        <li>{props.text}</li>
+      <ListItem>
+        <ListItemAvatar>
+          <Avatar/>
+        </ListItemAvatar>
         <ListItemText primary="Todo" secondary={props.text} />
-        </ListItem>
+      </ListItem>
     </List>
-  )
+  );
 }
 
-export default Todo
+export default Todo;
