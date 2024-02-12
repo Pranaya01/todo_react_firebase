@@ -4,8 +4,6 @@ import './App.css';
 import Todo from './Todo';
 import db from './firebase';
 
-
-
 function App() {
 
   //todos variable is on array
@@ -15,8 +13,8 @@ function App() {
   //when the app loads, we need too  listen to the database and  fetch new todos as they get added/removed
   useEffect(() => {
     //this codes here.... fires when the app.js loads
-    db.collection('todo').onSnapshot((snapshot) => {
-      console.log(setTodos(snapshot.docs.map(doc => doc.data().todo)));
+    db.collection('todos').onSnapshot(snapshot => {
+      console.log(snapshot.docs.map(doc => doc.data().todo));
         setTodos(snapshot.docs.map(doc => doc.data().todo))
     })
   }, []);
